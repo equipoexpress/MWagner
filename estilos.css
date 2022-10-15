@@ -1,1 +1,26 @@
-h1{color:blue}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size:6vw;
+    color:#FFBE00}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size:5vw;
+    color:#FF3F20}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4vw;
+    color:#9F0052}
+p{
+    font-family: 'DM Sans', sans-serif;
+    font-size:2vw;
+    color:#443988}
+.encabezado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;}
+.menu{
+    flex-grow: 1;
+    flex-basis: 100%;
+    padding: 10px;}
