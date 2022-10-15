@@ -55,7 +55,7 @@
    <h2>Formulario de Contacto</h2>
    <h3>A continuación dejo un formulario para que cargues tu información y así podamos trabajar en conjunto.</h3>
    <p>¡Hola Mundo! p</p>
-   <form name="formdec" id="formdec" action="/action_page.php"  onsubmit="return validateForm()">
+   <form name="formdec" id="formdec" method="post" action="/action_page.php"  onsubmit="return validateForm()">
     <fieldset>
      <legend>Formulario de contacto:</legend>
      <label for="nombre">Nombre:</label>
@@ -71,7 +71,7 @@
         <option>Mañana</option>
         <option>Tarde</option>
     </select><br><br>
-    <label for="diasyhorarios">Disponibilidad:</label><br><br>
+    <label for="disp">Disponibilidad:</label><br><br>
         <textarea name="disp" rows="10" cols="40">Escribe tus días y/o horarios de preferencia para concretar una reunión.</textarea><br><br>
      <label for="consulta">Consulta:</label><br><br>
      <textarea name="consulta" rows="10" cols="40" required>Escribe tu consulta... </textarea><br><br>
