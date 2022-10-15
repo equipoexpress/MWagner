@@ -27,7 +27,7 @@
             alert("El correo debe ser completado");
             return false;
           }
-          let a = document.forms["formdec"]["comentario"].value;
+          let a = document.forms["formdec"]["consulta"].value;
           if (a == "") {
             alert("La consulta debe ser completada");
             return false;
@@ -74,7 +74,7 @@
     <label for="diasyhorarios">Disponibilidad:</label><br><br>
         <textarea name="disp" rows="10" cols="40">Escribe tus días y/o horarios de preferencia para concretar una reunión.</textarea><br><br>
      <label for="consulta">Consulta:</label><br><br>
-     <textarea name="comentario" rows="10" cols="40" required>Escribe tu consulta... </textarea><br><br>
+     <textarea name="consulta" rows="10" cols="40" required>Escribe tu consulta... </textarea><br><br>
      <input type="submit" value="Enviar">
      <input type="reset" value="Borrar">
     </fieldset>
