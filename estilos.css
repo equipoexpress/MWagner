@@ -53,3 +53,8 @@ a {
     display: flex;
 }
 
+.contenedor{
+    width: 90%
+    max-content 1000px
+    margin: 10px;
+}
