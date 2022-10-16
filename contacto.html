@@ -12,30 +12,76 @@
         rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
     <title>Contacto</title>
+    <script>
+        function validateForm() {
+          let x = document.forms["formdec"]["nombre"].value;
+          if (x == "") {
+            alert("El nombre debe ser completado");
+            return false;
+          }
+          let z = document.forms["formdec"]["apellido"].value;
+          if (z == "") {
+            alert("El apellido debe ser completado");
+            return false;
+          }
+          let e = document.forms["formdec"]["email"].value;
+          if (e == "") {
+            alert("El correo debe ser completado");
+            return false;
+          }
+          let a = document.forms["formdec"]["consulta"].value;
+          if (a == "") {
+            alert("La consulta debe ser completada");
+            return false;
+          }
+        }
+        </script>
+        
 </head>
 
 <body>
-    <header class="header">
-        <div>
-            <a href="index.html"><img src="img/Logo.png" width="130vw" alt="Logo Micaela Wagner"></a>
+    <header>
+        <div class="encabezado">
+            <a href="index.html"><img src="img/Logo.png" width="200vw" alt="Logo Micaela Wagner"></a>
+            <nav>
+                <div class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="acerca-de.html">Acerca de mi</a>
+                <a href="contacto.html">Contacto</a>
+                </div>   
+            </nav>
+            Buscar (¿agregamos lupa?)
         </div>
     </header>
-   
-    <nav>
-        <div class="menu">
-            <div><a href="index.html">Inicio</a></div>
-            <div><a href="portfolio.html">Portfolio</a></div>
-            <div><a href="acerca-de.html">Acerca de</a></div>
-            <div><a href="contacto.html">Contacto</a></div>
-        </div>
-    </nav>
-   
-    <main>
-        <h1>Contacto H1</h1>
-        <h2>segunda línea h2</h2>
-        <h3>tercera línea h3</h3>
-        <p>¡Hola Mundo! p</p>
-    
+    <h1>¡Conozcámosnos!</h1>
+    <h2>Formulario de Contacto</h2>
+    <h3>A continuación dejo un formulario para que cargues tu información y así podamos trabajar en conjunto.</h3>
+    <p>¡Hola Mundo! p</p>
+    <form name="formdec" id="formdec" method="post" action="/action_page.php"  onsubmit="return validateForm()">
+     <fieldset>
+      <legend>Formulario de contacto:</legend>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required><br><br>
+      <label for="email">Correo:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="calendar">Fecha de la consulta:</label>
+      <input type="date" id="calendar" name="calendar"><br><br>
+      <label for="turno">Franja horaria de preferencia:</label>
+      <select name="turno"><br><br>
+         <option>Mañana</option>
+         <option>Tarde</option>
+     </select><br><br>
+     <label for="disp">Disponibilidad:</label><br><br>
+         <textarea name="disp" rows="10" cols="40">Escribe tus días y/o horarios de preferencia para concretar una reunión.</textarea><br><br>
+      <label for="consulta">Consulta:</label><br><br>
+      <textarea name="consulta" rows="10" cols="40" required>Escribe tu consulta... </textarea><br><br>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Borrar">
+     </fieldset>
+    </form>
     <footer>
         <div class="footer">
             <div>Datos de contacto footer</div>
