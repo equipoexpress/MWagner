@@ -56,5 +56,5 @@ a {
 .contenedor{
     width: 90%
     max-content 1000px
-    margin: 10px;
+    margin: 20px auto;
 }
