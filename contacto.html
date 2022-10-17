@@ -1,96 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Montserrat:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
-    <title>Contacto</title>
-    <script>
-        function validateForm() {
-          let x = document.forms["formdec"]["nombre"].value;
-          if (x == "") {
-            alert("El nombre debe ser completado");
-            return false;
-          }
-          let z = document.forms["formdec"]["apellido"].value;
-          if (z == "") {
-            alert("El apellido debe ser completado");
-            return false;
-          }
-          let e = document.forms["formdec"]["email"].value;
-          if (e == "") {
-            alert("El correo debe ser completado");
-            return false;
-          }
-          let a = document.forms["formdec"]["consulta"].value;
-          if (a == "") {
-            alert("La consulta debe ser completada");
-            return false;
-          }
-        }
-        </script>
-        
+  <meta charset="UTF-8">
+  <title>Micaela Wagner</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Montserrat:wght@700&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b4c89b0a1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="estilos.css">
+  <script>
+    function validateForm() {
+      let x = document.forms["formdec"]["nombre"].value;
+      if (x == "") {
+        alert("El nombre debe ser completado");
+        return false;
+      }
+      let z = document.forms["formdec"]["apellido"].value;
+      if (z == "") {
+        alert("El apellido debe ser completado");
+        return false;
+      }
+      let e = document.forms["formdec"]["email"].value;
+      if (e == "") {
+        alert("El correo debe ser completado");
+        return false;
+      }
+      let a = document.forms["formdec"]["consulta"].value;
+      if (a == "") {
+        alert("La consulta debe ser completada");
+        return false;
+      }
+    }
+  </script>
+
 </head>
 
 <body>
-  <header class="header">
-    <div>
-        <a href="index.html"><img src="img/Logo.png" width="130vw" alt="Logo Micaela Wagner"></a>
-    </div>
-</header>
-
-<nav>
-    <div class="menu">
-        <div><a href="index.html">Inicio</a></div>
-        <div><a href="portfolio.html">Portfolio</a></div>
-        <div><a href="acerca-de.html">Acerca de</a></div>
-        <div><a href="contacto.html">Contacto</a></div>
-    </div>
-</nav>
-<main>
-    <h1>¡Conozcámosnos!</h1>
-    <h2>Formulario de Contacto</h2>
-    <h3>A continuación dejo un formulario para que cargues tu información y así podamos trabajar en conjunto.</h3>
-    <p>¡Hola Mundo! p</p>
-    <form name="formdec" id="formdec" method="post" action="/action_page.php"  onsubmit="return validateForm()">
-     <fieldset>
-      <legend>Formulario de contacto:</legend>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required><br><br>
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" name="apellido" required><br><br>
-      <label for="email">Correo:</label>
-      <input type="email" id="email" name="email" required><br><br>
-      <label for="calendar">Fecha de la consulta:</label>
-      <input type="date" id="calendar" name="calendar"><br><br>
-      <label for="turno">Franja horaria de preferencia:</label>
-      <select name="turno"><br><br>
-         <option>Mañana</option>
-         <option>Tarde</option>
-     </select><br><br>
-     <label for="disp">Disponibilidad:</label><br><br>
-         <textarea name="disp" rows="10" cols="40">Escribe tus días y/o horarios de preferencia para concretar una reunión.</textarea><br><br>
-      <label for="consulta">Consulta:</label><br><br>
-      <textarea name="consulta" rows="10" cols="40" required>Escribe tu consulta... </textarea><br><br>
-      <input type="submit" value="Enviar">
-      <input type="reset" value="Borrar">
-     </fieldset>
-    </form>
-  </main>
-    <footer>
-        <div class="footer">
-            <div>Datos de contacto footer</div>
-            <div>Redes Sociales</div>
-            <div>Otra información</div>
+  <div class="contenedor">
+    <header class="header margen">
+      <div class="menu">
+        <div class="logo">
+          <a href="index.html"><img src="img/Logo.png" width="130vw" alt="Logo Micaela Wagner"></a>
         </div>
+
+        <nav class="nav">
+          <a href="index.html">Inicio</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="acerca-de.html">Acerca de</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1>¡Conozcámosnos!</h1>
+      <h2>Formulario de Contacto</h2>
+      <h3>A continuación dejo un formulario para que cargues tu información y así podamos trabajar en conjunto.</h3>
+      <p>¡Hola Mundo! p</p>
+      <form name="formdec" id="formdec" method="post" action="/action_page.php" onsubmit="return validateForm()">
+        <fieldset>
+          <legend>Formulario de contacto:</legend>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required><br><br>
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required><br><br>
+          <label for="email">Correo:</label>
+          <input type="email" id="email" name="email" required><br><br>
+          <label for="calendar">Fecha de la consulta:</label>
+          <input type="date" id="calendar" name="calendar"><br><br>
+          <label for="turno">Franja horaria de preferencia:</label>
+          <select name="turno"><br><br>
+            <option>Mañana</option>
+            <option>Tarde</option>
+          </select><br><br>
+          <label for="disp">Disponibilidad:</label><br><br>
+          <textarea name="disp" rows="10"
+            cols="40">Escribe tus días y/o horarios de preferencia para concretar una reunión.</textarea><br><br>
+          <label for="consulta">Consulta:</label><br><br>
+          <textarea name="consulta" rows="10" cols="40" required>Escribe tu consulta... </textarea><br><br>
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Borrar">
+        </fieldset>
+      </form>
+    </main>
+    <footer class="footer">
+      <nav class="pie">
+        <div>Datos de contacto footer</div>
+        <div>Redes Sociales</div>
+        <div>Otra información</div>
+      </nav>
     </footer>
+  </div>
 </body>
 
 </html>
