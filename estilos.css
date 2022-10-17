@@ -146,8 +146,7 @@ p {
 @media all and (max-width:400px)
     .barralateral{
         flex-direction: column;
-    }
-
+}
 
 .contenedorgrid {
     margin: 20px auto;
