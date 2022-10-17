@@ -147,11 +147,8 @@ p {
         flex-direction: column;
     }
 
-.footer{
-    display: flex;
-}
-  
-.contenedor {
+
+.contenedorgrid {
     margin: 20px auto;
     width: 90%;
     max-width: 1000px;
@@ -160,19 +157,24 @@ p {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, auto);
 
-    grid-template-areas: "header header header"
-                         "menu menu menu"
+    grid-template-areas: "header header header"               
                          "contenido contenido sidebar"
                          "widget-1 widget-2 sidebar"
-                         "footer footer footer"
 
+/*                        
+     grid-template-areas: "header header header"
+                         "menu menu menu"
+                         "footer footer footer"
+*/
 }
 
-.contenedor > div,
-.contenedor .header,
-.contenedor .contenido,
-.contenedor .sidebar,
-.contenedor .footer {
+.contenedorgrid > div,
+.contenedorgrid .header,
+.contenedorgrid .contenido,
+.contenedorgrid .sidebar,
+
+/*
+.contenedorgrid .footer {
     background-color: #FF3F20;
     padding: 20px;
     border-radius: 4px;
@@ -190,17 +192,18 @@ p {
     align-items: center;
     justify-content: center;
 }
-.contenedor .contenido {
+*/
+.contenedorgrid .contenido {
     grid-area: contenido;
 }
-.contenedor .sidebar{
+.contenedorgrid .sidebar{
     justify-content: center;
     min-height: 100px;
     grid-area: sidebar;
 }
 
-.contenedor .widget-1,
-.contenedor .widget-2 {
+.contenedorgrid .widget-1,
+.contenedorgrid .widget-2 {
     background-color: #443988;
     color: #ffff;
     height: 100px;
@@ -210,13 +213,14 @@ p {
     justify-content: center;
 }
 
-.contenedor .widget-1 {
+.contenedorgrid .widget-1 {
     grid-area: widget-1;
 }
-.contenedor .widget-2 {
+.contenedorgrid .widget-2 {
     grid-area: widget-2;
 }
 
+/*
 .contenedor .footer {
     background-color: #FFBE00;
     color: #ffff;
@@ -234,5 +238,5 @@ p {
     }   
   
 }
-
+*/
 
