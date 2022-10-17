@@ -126,7 +126,7 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-    .contenedor.{
+    .contenedor{
         grid-template-areas: "header header header"
         "menu menu menu"
         "contenido contenido contenido"
