@@ -1,7 +1,108 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'DM Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.contenedor{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.margen{
+    padding:20px 50px;
+}
+
+.header{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.banner{
+    background:url(img/bg-header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: contain;
+}
+    .menu{
+        display: flex;
+        flex-flow: row nowrap;
+        height: 10vh;
+        align-items: center;
+    }
+        .logo{
+            flex: 1 1 auto;
+        }
+        .nav{
+            flex: 3 1 auto;
+            text-align: right;
+        }
+            .nav a{
+                color:#1d1d1b;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.2vw;
+                font-weight:900;
+                padding: 0 10px;
+            }
+            .nav a:hover{
+                color:#52006A;
+            }
+
+    .bienvenida{
+        display: inline-flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+        height: 90vh;
+        width: 70vw;
+    }
+    
+.seccion{
+    background-color:aliceblue ;
+    display: flex;
+}
+    .articulos{
+        flex:2 1 auto;
+        display:flex;
+        flex-flow:row wrap;
+    }
+        .articulo{
+            background-color: #FF7600;
+            flex:1 1 40%;
+        }
+        .navegararticulos{
+            flex:1 1 100%
+        }
+    .barralateral{
+        flex:1 1 auto;
+    }
+        .infolateral{
+            
+        }
+.footer{
+    background-color: #9F0052;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+    .pie{
+    display: flex;
+    flex-flow: row wrap;
+    }
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 6vw;
     color: #FFBE00;
+    text-align: left;
 }
 
 h2 {
@@ -17,39 +118,31 @@ h3 {
 }
 
 p {
-    font-family: 'DM Sans', sans-serif;
     font-size: 2vw;
     color: #443988;
 }
 
-a {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 2vw;
-    font-weight: 600;
-    color: #9F0052;
-    text-decoration: none;
-}
-.header{
-    float: left;
-}
-.menu{
-    display: flex;
-    justify-content: center;
 
+@media all and (max-width:800px){
+    .seccion{
+        flex-direction: column;
+    }
+    .menu{
+         flex-direction: column;
+         height: auto;
+    }
+    .barralateral{
+        display: flex;
+        justify-content: center  ;
+    } 
 }
-.menu > div{
-    margin: 10px;
-    padding: 20px;
+@media all and (max-width:600px){
+    .articulos{
+        flex-direction: column;
+    }
+    
 }
-
-.menu a:link {
-    color: #9F0052;
-}
-.menu a:hover {
-    color: #FF3F20;
-}
-
-.footer{
-    display: flex;
-}
-
+@media all and (max-width:400px)
+    .barralateral{
+        flex-direction: column;
+    }
