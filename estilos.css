@@ -203,8 +203,22 @@ p {
 }
 @media all and (max-width:400px){
     .barralateral{
-        flex-direction:column;
-}
+        flex-direction: column;
+    }
+
+
+.contenedorgrid {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+    grid-template-areas: "contenido contenido sidebar"
+                         "widget-1 widget-2 sidebar"
+
 }
 
 
