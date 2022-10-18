@@ -45,7 +45,8 @@
     <header class="header margen">
       <div class="menu">
         <div class="logo">
-          <a href="index.html"><img src="img/Logo.png" width="130vw" alt="Logo Micaela Wagner"></a>
+          <span><a href="index.html"><img src="img/Logo.png" width="130vw" alt="Logo Micaela Wagner"></a></span>
+          <span class="punto"></span>
         </div>
 
         <nav class="nav">
@@ -56,44 +57,75 @@
         </nav>
       </div>
     </header>
-    <main>
-      <h1>¡Conozcámosnos!</h1>
-      <h2>Formulario de Contacto</h2>
-      <h3>A continuación dejo un formulario para que cargues tu información y así podamos trabajar en conjunto.</h3>
-      <p>¡Hola Mundo! p</p>
-      <form name="formdec" id="formdec" method="post" action="/action_page.php" onsubmit="return validateForm()">
-        <fieldset>
-          <legend>Formulario de contacto:</legend>
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required><br><br>
-          <label for="apellido">Apellido:</label>
-          <input type="text" id="apellido" name="apellido" required><br><br>
-          <label for="email">Correo:</label>
-          <input type="email" id="email" name="email" required><br><br>
-          <label for="calendar">Fecha de la consulta:</label>
-          <input type="date" id="calendar" name="calendar"><br><br>
-          <label for="turno">Franja horaria de preferencia:</label>
-          <select name="turno"><br><br>
-            <option>Mañana</option>
-            <option>Tarde</option>
-          </select><br><br>
-          <label for="disp">Disponibilidad:</label><br><br>
-          <textarea name="disp" rows="10"
-            cols="40">Escribe tus días y/o horarios de preferencia para concretar una reunión.</textarea><br><br>
-          <label for="consulta">Consulta:</label><br><br>
-          <textarea name="consulta" rows="10" cols="40" required>Escribe tu consulta... </textarea><br><br>
-          <input type="submit" value="Enviar">
-          <input type="reset" value="Borrar">
-        </fieldset>
-      </form>
-    </main>
-    <footer class="footer">
-      <nav class="pie">
-        <div>Datos de contacto footer</div>
-        <div>Redes Sociales</div>
-        <div>Otra información</div>
-      </nav>
-    </footer>
+    <div class="contenedorgrid">
+      <main class="contenido">
+        <h1>¡Conozcámosnos!</h1>
+        <h2>Formulario de Contacto</h2>
+        <h3>A continuación dejo un formulario para que cargues tu información y así podamos trabajar en conjunto.</h3>
+        <p>¡Hola Mundo! p</p>
+        <form name="formdec" id="formdec" method="post" action="/action_page.php" onsubmit="return validateForm()">
+          <fieldset>
+            <legend>Formulario de contacto:</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="calendar">Fecha de la consulta:</label>
+            <input type="date" id="calendar" name="calendar"><br><br>
+            <label for="turno">Franja horaria de preferencia:</label>
+            <select name="turno"><br><br>
+              <option>Mañana</option>
+              <option>Tarde</option>
+            </select><br><br>
+            <label for="disp">Disponibilidad:</label><br><br>
+            <textarea name="disp" rows="10"
+              cols="40">Escribe tus días y/o horarios de preferencia para concretar una reunión.</textarea><br><br>
+            <label for="consulta">Consulta:</label><br><br>
+            <textarea name="consulta" rows="10" cols="40" required>Escribe tu consulta... </textarea><br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+          </fieldset>
+        </form>
+      </main>
+    
+      <aside class="sidebar">
+        <h1>sidebar</h1> <br>
+        <p>
+        <h3>What I like</h3><br>
+        Making Playlists <br>
+        Auto-layout<br>
+        Digital Collections<br>
+        </h3>What I'm learning</h3><br>
+        Tennis<br>
+        Latte Art<br>
+        Procreate<br>
+        <h3>Recognition</h3><br>
+        10 Best UX Portfolios and What We Can Learn from Them<br>
+        Cool Portfolio Websites that Stand Out of the Crowd<br>
+        10 UX Design Portfolios<br>
+        The Best Sites for Building your Design Portfolio<br>
+        10+ UX Design Portfolio Examples)</p>
+      </aside>
+
+    <div class="widget-1">
+      <h3>Widget 1</h3>
+    </div>
+
+    <div class="widget-2">
+      <h3>Widget 2</h3>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <nav class="pie">
+      <div>Datos de contacto footer</div>
+      <div>Redes Sociales</div>
+      <div>Otra información</div>
+    </nav>
+  </footer>
   </div>
 </body>
 

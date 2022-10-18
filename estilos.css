@@ -39,7 +39,42 @@ a{
     }
         .logo{
             flex: 1 1 auto;
+            display: inline-flex;
         }
+            .punto{
+                width: 2vw;
+                height: 2vw;
+                border-radius: 50%;
+                background-color: #FFBE00;
+                align-self:center;
+                animation-name: animacion;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes animacion{
+                0%{
+                    background-color: #FFBE00;
+                    transform: translateX(0);
+                }
+                25%{
+                    background-color: #D4471C;
+                    transform: translateX(25%);
+                }
+                50%{
+                    background-color: #1CA6C3;
+                    transform: translateX(50%);
+                }
+                75%{
+                    background-color: #72AB80;
+                    transform: translateX(75%);
+                }
+                100%{
+                    background: #89B458;
+                    transform: translateX(100%);
+                }
+
+            }
         .nav{
             flex: 3 1 auto;
             text-align: right;
@@ -65,28 +100,51 @@ a{
         width: 70vw;
     }
     
-.seccion{
-    background-color:aliceblue ;
-    display: flex;
-}
-    .articulos{
-        flex:2 1 auto;
-        display:flex;
-        flex-flow:row wrap;
+.contenedorgrid {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+    grid-template-areas: "contenido contenido sidebar"
+                             "widget-1 widget-2 sidebar"
     }
-        .articulo{
-            background-color: #FF7600;
-            flex:1 1 40%;
-        }
-        .navegararticulos{
-            flex:1 1 100%
-        }
-    .barralateral{
-        flex:1 1 auto;
+    
+    .contenedorgrid > div,
+    .contenedorgrid .contenido,
+    .contenedorgrid .sidebar,
+    
+    .contenedorgrid .contenido {
+        grid-area: contenido;
     }
-        .infolateral{
-            
-        }
+
+    .contenedorgrid .sidebar{
+        justify-content: center;
+        min-height: 100px;
+        grid-area: sidebar;
+    }
+    
+    .contenedorgrid .widget-1, .contenedorgrid .widget-2 {
+        background-color: #443988;
+        color: #ffff;
+        height: 100px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contenedorgrid .widget-1 {
+        grid-area: widget-1;
+    }
+    .contenedorgrid .widget-2 {
+        grid-area: widget-2;
+    }
+
+
 .footer{
     background-color: #9F0052;
     display: flex;
@@ -143,56 +201,15 @@ p {
     }
     
 }
-@media all and (max-width:400px)
+@media all and (max-width:400px){
     .barralateral{
-        flex-direction: column;
-    }
-
-
-.contenedorgrid {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1000px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-
-    grid-template-areas: "contenido contenido sidebar"
-                         "widget-1 widget-2 sidebar"
-
+        flex-direction:column;
+}
 }
 
-.contenedorgrid > div,
-.contenedorgrid .contenido,
-.contenedorgrid .sidebar,
 
-.contenedorgrid .contenido {
-    grid-area: contenido;
-}
-.contenedorgrid .sidebar{
-    justify-content: center;
-    min-height: 100px;
-    grid-area: sidebar;
-}
 
-.contenedorgrid .widget-1,
-.contenedorgrid .widget-2 {
-    background-color: #443988;
-    color: #ffff;
-    height: 100px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.contenedorgrid .widget-1 {
-    grid-area: widget-1;
-}
-.contenedorgrid .widget-2 {
-    grid-area: widget-2;
-}
 
 /*
 @media screen and (max-width: 768px) {
