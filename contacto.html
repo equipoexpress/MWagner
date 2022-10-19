@@ -13,30 +13,7 @@
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/6b4c89b0a1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="estilos.css">
-  <script>
-    function validateForm() {
-      let x = document.forms["formdec"]["nombre"].value;
-      if (x == "") {
-        alert("El nombre debe ser completado");
-        return false;
-      }
-      let z = document.forms["formdec"]["apellido"].value;
-      if (z == "") {
-        alert("El apellido debe ser completado");
-        return false;
-      }
-      let e = document.forms["formdec"]["email"].value;
-      if (e == "") {
-        alert("El correo debe ser completado");
-        return false;
-      }
-      let a = document.forms["formdec"]["consulta"].value;
-      if (a == "") {
-        alert("La consulta debe ser completada");
-        return false;
-      }
-    }
-  </script>
+  <script defer src="script.js"></script>
 
 </head>
 
@@ -44,17 +21,23 @@
   <div class="contenedor">
     <header class="header margen">
       <div class="menu">
-        <div class="logo">
-          <span><a href="index.html"><img src="img/Logo.png" width="130vw" alt="Logo Micaela Wagner"></a></span>
-          <span class="punto"></span>
-        </div>
+          <div class="logo">
+              <span><a href="index.html"><img src="img/Logo.png" width="140hw" alt="Logo Micaela Wagner"></a></span>
+              <span class="punto"></span>
+          </div>
 
-        <nav class="nav">
-          <a href="index.html">Inicio</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="acerca-de.html">Acerca de</a>
-          <a href="contacto.html">Contacto</a>
-        </nav>
+          <button class="nav-toggle">
+              <i class="fa-solid fa-bars"></i>
+          </button>
+          
+          <nav class="nav">
+              <ul class="nav-menu">
+                  <li class="nav-menu-item"><a href="index.html">Inicio</a></li>
+                  <li class="nav-menu-item"><a href="portfolio.html">Portfolio</a></li>
+                  <li class="nav-menu-item"><a href="acerca-de.html">Acerca de</a></li>
+                  <li class="nav-menu-item"><a href="contacto.html">Contacto</a></li>
+              </ul>
+          </nav>
       </div>
     </header>
     <div class="contenedorgrid">

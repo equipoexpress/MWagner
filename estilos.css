@@ -20,6 +20,7 @@ a{
     padding:20px 50px;
 }
 
+/*HEADER CON FLEX*/
 .header{
     display: flex;
     flex-flow: column nowrap;
@@ -33,17 +34,18 @@ a{
 }
     .menu{
         display: flex;
+        justify-content: space-between;
         flex-flow: row nowrap;
-        height: 10vh;
         align-items: center;
     }
+
+        /*ANIMACIÓN PUNTO DEL LOGO EN HEADER*/
         .logo{
-            flex: 1 1 auto;
             display: inline-flex;
         }
             .punto{
-                width: 2vw;
-                height: 2vw;
+                width: 1.5vw;
+                height: 1.5vw;
                 border-radius: 50%;
                 background-color: #FFBE00;
                 align-self:center;
@@ -59,26 +61,31 @@ a{
                 }
                 25%{
                     background-color: #D4471C;
-                    transform: translateX(25%);
                 }
                 50%{
                     background-color: #1CA6C3;
-                    transform: translateX(50%);
                 }
                 75%{
                     background-color: #72AB80;
-                    transform: translateX(75%);
                 }
                 100%{
                     background: #89B458;
                     transform: translateX(100%);
+                    border-radius: 0%;
                 }
-
             }
-        .nav{
-            flex: 3 1 auto;
-            text-align: right;
+        .nav-toggle{
+            color:aliceblue;
+            background: none;
+            border:none;
+            cursor:pointer;
+            display:none;
         }
+
+        .nav-menu{
+            display: flex;
+        }
+
             .nav a{
                 color:#1d1d1b;
                 font-family: 'Montserrat', sans-serif;
@@ -88,18 +95,25 @@ a{
             }
             .nav a:hover{
                 color:#52006A;
+                background-color: rgba(127,17,224,.3);
+                transition: 0,5s;
             }
+            .nav ul{
+                list-style-type: none;
+            }
+
 
     .bienvenida{
         display: inline-flex;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: flex-start;
         align-content: center;
-        height: 90vh;
-        width: 70vw;
+        height: 70vh;
+        width: 50vw;
     }
-    
+
+/*MAIN CON GRID*/
 .contenedorgrid {
     margin: 20px auto;
     width: 90%;
@@ -144,7 +158,7 @@ a{
         grid-area: widget-2;
     }
 
-
+/*FOOTER CON FLEXBOX*/
 .footer{
     background-color: #9F0052;
     display: flex;
@@ -158,20 +172,20 @@ a{
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 6vw;
+    font-size: 5vw;
     color: #FFBE00;
     text-align: left;
 }
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 5vw;
+    font-size: 4vw;
     color: #FF3F20;
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 4vw;
+    font-size: 3vw;
     color: #9F0052;
 }
 
@@ -180,19 +194,47 @@ p {
     color: #443988;
 }
 
-
-@media all and (max-width:800px){
-    .seccion{
+/*PUNTOS DE CONTROL*/
+@media all and (max-width:768px){
+    .nav-menu{
         flex-direction: column;
+        align-items: center;
+        background-color: rgba(127,17,224,.8);
+        top: 20vh;
+        left:0;
+        position: fixed;
+        width: 100%;
+        padding: 2vh 0;
+        height: 100%;
+        overflow-y: auto;
+        left:100%;
+        transition: left 0.3s;
     }
-    .menu{
-         flex-direction: column;
-         height: auto;
+
+    .nav-toggle{
+        display:block;
+        font-size: 5vw;
     }
-    .barralateral{
-        display: flex;
-        justify-content: center  ;
-    } 
+
+    .nav-menu-visible{
+        left:0;
+
+    }
+
+    .nav a{
+        font-size: 2.5vw;
+    }
+
+    .nav a:hover{
+        background-color: none;
+        color:#FF3F20;
+    }
+
+    .contenedorgrid{
+        grid-template-areas: "contenido contenido contenido"
+        "sidebar sidebar sidebar"
+        "widget-1 widget-1 widget-2"
+    }   
     
 }
 @media all and (max-width:600px){
@@ -205,33 +247,4 @@ p {
     .barralateral{
         flex-direction: column;
     }
-
-
-.contenedorgrid {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1000px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-
-    grid-template-areas: "contenido contenido sidebar"
-                         "widget-1 widget-2 sidebar"
-
 }
-
-
-
-
-
-/*
-@media screen and (max-width: 768px) {
-    .contenedorgrid.{
-        grid-template-areas: "contenido contenido contenido"
-        "sidebar sidebar sidebar"
-        "widget-1 widget-1 widget-2"
-    }   
-}
-*/
-
