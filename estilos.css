@@ -201,11 +201,11 @@ p {
         flex-direction: column;
         align-items: center;
         background-color: rgba(127,17,224,.8);
-        top: 140hw;
+        top: 160hw;
         left:0;
         position: fixed;
         width: 100%;
-        padding: 2vh 0;
+        padding: 3vh 0;
         height: 100%;
         overflow-y: auto;
         left:100%;
