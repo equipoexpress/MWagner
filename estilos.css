@@ -201,7 +201,7 @@ p {
         flex-direction: column;
         align-items: center;
         background-color: rgba(127,17,224,.8);
-        top: 160hw;
+        top: 20vh;
         left:0;
         position: fixed;
         width: 100%;
