@@ -46,6 +46,11 @@ p {
     padding: 20px 50px;
 }
 
+.boton{
+    border-bottom:1px solid #FF3F20 ;
+    color:#D4471C;
+}
+
 /*HEADER CON FLEX*/
 .header {
     display: flex;
@@ -149,23 +154,53 @@ p {
 }
 
 /*MAIN CON GRID*/
+.contenedorgrid-full{
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-gap: 20px;
+
+}
+
+.item-full{
+    padding:30px;
+    text-align:center;
+    border-radius: 5%;
+    box-shadow: 10px 10px 20px 1px rgba(68, 57, 136, .3);
+}
+
+.item-titulo{
+    grid-column: 1/4;
+    text-align: center;
+    padding: 5vh 0;
+    margin-top: 10vh;
+}
+
+.item-imagen{
+    grid-column: 2/4;
+    width:100%;
+    height: auto;
+    text-align: right; 
+    }
+
+.item-descripcion{
+    padding: 50% 0;
+    text-align: left;
+}
+
+
 .contenedorgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "contenido contenido sidebar" "widget-1 widget-2 sidebar";
     margin: 20px auto;
     width: 90%;
     max-width: 1000px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-
-    grid-template-areas: "contenido contenido sidebar"
-        "widget-1 widget-2 sidebar"
 }
 
-.contenedorgrid>div,
-.contenedorgrid .contenido,
+.contenedorgrid>div, 
 .contenedorgrid .sidebar,
-
 .contenedorgrid .contenido {
     grid-area: contenido;
 }
@@ -176,8 +211,7 @@ p {
     grid-area: sidebar;
 }
 
-.contenedorgrid .widget-1,
-.contenedorgrid .widget-2 {
+.contenedorgrid .widget-1, .contenedorgrid .widget-2 {
     background-color: #443988;
     color: #ffff;
     height: 100px;
@@ -268,17 +302,3 @@ p {
     }
 
 }
-
-/*
-@media all and (max-width:600px){
-    .articulos{
-        flex-direction: column;
-    }
-    
-}
-@media all and (max-width:400px){
-    .barralateral{
-        flex-direction: column;
-    }
-}
-*/
