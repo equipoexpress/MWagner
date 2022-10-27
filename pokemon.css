@@ -48,7 +48,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     grid-template-rows: repeat(2, auto);
-    grid-template-areas: "card card card" "card card card""card card card""card card card" ;
     margin: 20px auto;
     width: 90%;
     max-width: 1000px;
