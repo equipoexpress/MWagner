@@ -18,7 +18,7 @@
     color: white;
   }
 
-  #container{
+  .container{
     width: min(100%, 1000px);
     margin: 100px auto;
     display: flex;
