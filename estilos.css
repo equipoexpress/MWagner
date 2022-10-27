@@ -164,56 +164,23 @@ p {
         "descripcion imagen imagen"
         "titulo3 titulo3 titulo3"
         "servicio1 servicio2 servicio3";
-
 }
 
-.titulo {
-    grid-area: titulo;
-}
-
-.bloque1 {
-    grid-area: bloque1;
-}
-
-.bloque2 {
-    grid-area: bloque2;
-}
-
-.bloque3 {
-    grid-area: bloque3;
-}
-
-.titulo2 {
-    grid-area: titulo2;
-}
-
-.descripcion {
-    grid-area: descripcion;
-}
-
-.imagen {
-    grid-area: imagen
-}
-
-.titulo3 {
-    grid-area: titulo3;
-}
-
-.sevicio1 {
-    grid-area: servicio1;
-}
-
-.sevicio2 {
-    grid-area: servicio2;
-}
-
-.sevicio3 {
-    grid-area: servicio3;
-}
+.titulo {grid-area: titulo;}
+.bloque1 {grid-area: bloque1;}
+.bloque2 {grid-area: bloque2;}
+.bloque3 {grid-area: bloque3;}
+.titulo2 {grid-area: titulo2;}
+.descripcion {grid-area: descripcion;}
+.imagen {grid-area: imagen}
+.titulo3 {grid-area: titulo3;}
+.sevicio1 {grid-area: servicio1;}
+.sevicio2 {grid-area: servicio2;}
+.sevicio3 {grid-area: servicio3;}
 
 .item-titulo {
     text-align: center;
-    padding: 5vh 0;
+    padding: 8vh 0;
     margin-top: 10vh;
 }
 
@@ -222,6 +189,7 @@ p {
     text-align: center;
     border-radius: 5%;
     box-shadow: 10px 10px 20px 1px rgba(68, 57, 136, .3);
+    background-color: aliceblue;
 }
 
 .item-imagen {
@@ -233,6 +201,16 @@ p {
 .item-descripcion {
     padding: 50% 0;
     text-align: left;
+}
+
+.item-servicio{
+    padding-bottom: 10%;
+    text-align: center;
+}
+
+.item-servicio h3{
+    font-size: large;
+    text-transform: uppercase;
 
 }
 
@@ -283,6 +261,7 @@ p {
     display: flex;
     flex-flow: column nowrap;
     border-top: 1px solid #FF3F20;
+    background-color: rgba(255, 118, 0, 0.1);
     margin-bottom: 5vh;
 }
 
@@ -347,12 +326,12 @@ p {
 
     .contenedorgrid-full {
         grid-template: repeat(12, auto) / 100%;
-        grid-template-areas:"titulo" "bloque1" "bloque2" "bloque3" "titulo2" "descripcion"
-                              "imagen" "titulo3" "servicio1" "servicio2" "servicio3";
+        grid-template-areas: "titulo" "bloque1" "bloque2" "bloque3" "titulo2" "descripcion"
+            "imagen" "titulo3" "servicio1" "servicio2" "servicio3";
     }
 
     .item-descripcion {
-        padding: 5%;    
+        padding: 5%;
     }
 
     .contenedorgrid {
