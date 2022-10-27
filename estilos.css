@@ -127,7 +127,6 @@ p {
 .nav a {
     color: #1d1d1b;
     font-family: 'Montserrat', sans-serif;
-    /*font-size: 1em;*/
     font-weight: 900;
     padding: 0 10px;
 }
@@ -206,12 +205,17 @@ p {
 .item-servicio{
     padding-bottom: 10%;
     text-align: center;
+    line-height: 50px;
 }
 
 .item-servicio h3{
     font-size: large;
     text-transform: uppercase;
+}
 
+.item-servicio ul{
+    line-height: normal;
+    list-style-type: none;
 }
 
 .contenedorgrid {
