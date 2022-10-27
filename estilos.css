@@ -156,7 +156,7 @@ p {
 /*MAIN CON GRID*/
 .contenedorgrid-full {
     display: grid;
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: 33% 1fr 33% /*repeat(3 1fr);*/
     grid-gap: 20px;
     grid-template-areas: "titulo titulo titulo"
         "bloque1 bloque2 bloque3"
@@ -164,6 +164,7 @@ p {
         "descripcion imagen imagen"
         "titulo3 titulo3 titulo3"
         "servicio1 servicio2 servicio3";
+
 }
 
 .titulo {
@@ -351,7 +352,7 @@ p {
     }
 
     .item-descripcion {
-        padding: 5% 0;    
+        padding: 5%;    
     }
 
     .contenedorgrid {
