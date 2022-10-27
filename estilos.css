@@ -406,11 +406,3 @@ p {
     .item-descripcion {
         padding: 5%;
     }
-
-    .contenedorgrid {
-        grid-template-areas: "contenido contenido contenido"
-            "sidebar sidebar sidebar"
-            "widget-1 widget-1 widget-2"
-    }
-
-}
