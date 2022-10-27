@@ -46,9 +46,9 @@ p {
     padding: 20px 50px;
 }
 
-.boton{
-    border-bottom:1px solid #FF3F20 ;
-    color:#D4471C;
+.boton {
+    border-bottom: 1px solid #FF3F20;
+    color: #D4471C;
 }
 
 /*HEADER CON FLEX*/
@@ -127,7 +127,6 @@ p {
 .nav a {
     color: #1d1d1b;
     font-family: 'Montserrat', sans-serif;
-    /*font-size: 1em;*/
     font-weight: 900;
     padding: 0 10px;
 }
@@ -154,39 +153,70 @@ p {
 }
 
 /*MAIN CON GRID*/
-.contenedorgrid-full{
+.contenedorgrid-full {
     display: grid;
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: 33% 1fr 33%;
     grid-gap: 20px;
-
+    grid-template-areas: "titulo titulo titulo"
+        "bloque1 bloque2 bloque3"
+        "titulo2 titulo2 titulo2"
+        "descripcion imagen imagen"
+        "titulo3 titulo3 titulo3"
+        "servicio1 servicio2 servicio3";
 }
 
-.item-full{
-    padding:30px;
-    text-align:center;
-    border-radius: 5%;
-    box-shadow: 10px 10px 20px 1px rgba(68, 57, 136, .3);
-}
+.titulo {grid-area: titulo;}
+.bloque1 {grid-area: bloque1;}
+.bloque2 {grid-area: bloque2;}
+.bloque3 {grid-area: bloque3;}
+.titulo2 {grid-area: titulo2;}
+.descripcion {grid-area: descripcion;}
+.imagen {grid-area: imagen}
+.titulo3 {grid-area: titulo3;}
+.sevicio1 {grid-area: servicio1;}
+.sevicio2 {grid-area: servicio2;}
+.sevicio3 {grid-area: servicio3;}
 
-.item-titulo{
-    grid-column: 1/4;
+.item-titulo {
     text-align: center;
-    padding: 5vh 0;
+    padding: 8vh 0;
     margin-top: 10vh;
 }
 
-.item-imagen{
-    grid-column: 2/4;
-    width:100%;
-    height: auto;
-    text-align: right; 
-    }
+.item-bloque {
+    padding: 30px;
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: 10px 10px 20px 1px rgba(68, 57, 136, .3);
+    background-color: aliceblue;
+}
 
-.item-descripcion{
+.item-imagen {
+    width: 100%;
+    height: auto;
+    text-align: right;
+}
+
+.item-descripcion {
     padding: 50% 0;
     text-align: left;
 }
 
+.item-servicio{
+    padding-bottom: 10%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.item-servicio h3{
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.item-servicio ul{
+    line-height: normal;
+    list-style-type: none;
+}
 
 .contenedorgrid {
     display: grid;
@@ -199,7 +229,7 @@ p {
     max-width: 1000px;
 }
 
-.contenedorgrid>div, 
+.contenedorgrid>div,
 .contenedorgrid .sidebar,
 .contenedorgrid .contenido {
     grid-area: contenido;
@@ -211,7 +241,8 @@ p {
     grid-area: sidebar;
 }
 
-.contenedorgrid .widget-1, .contenedorgrid .widget-2 {
+.contenedorgrid .widget-1,
+.contenedorgrid .widget-2 {
     background-color: #443988;
     color: #ffff;
     height: 100px;
@@ -234,6 +265,7 @@ p {
     display: flex;
     flex-flow: column nowrap;
     border-top: 1px solid #FF3F20;
+    background-color: rgba(255, 118, 0, 0.1);
     margin-bottom: 5vh;
 }
 
@@ -257,7 +289,7 @@ p {
     list-style-type: none;
 }
 
-/*PUNTOS DE CONTROL*/
+/*PUNTO DE CONTROL*/
 @media all and (max-width:768px) {
     .nav-menu {
         flex-direction: column;
@@ -276,6 +308,7 @@ p {
 
     .nav-toggle {
         display: block;
+        font-size: 1.5em;
     }
 
     .nav-menu-visible {
@@ -283,7 +316,7 @@ p {
     }
 
     .nav a {
-        font-size: 1.2em;
+        font-size: 2em;
     }
 
     .nav a:hover {
@@ -293,6 +326,16 @@ p {
 
     .bienvenida {
         width: 80vw;
+    }
+
+    .contenedorgrid-full {
+        grid-template: repeat(12, auto) / 100%;
+        grid-template-areas: "titulo" "bloque1" "bloque2" "bloque3" "titulo2" "descripcion"
+            "imagen" "titulo3" "servicio1" "servicio2" "servicio3";
+    }
+
+    .item-descripcion {
+        padding: 5%;
     }
 
     .contenedorgrid {
