@@ -18,13 +18,6 @@
     color: white;
   }
 
-  .container{
-    width: min(100%, 1000px);
-    margin: 100px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 
   .card{
     width: 25%px;
@@ -42,7 +35,7 @@
     color: #6e6e6e;
     font-weight: 500;
   }
-  .contenedorgrid {
+  .container {
     grid-template-areas: "card card card"
         "card card card"
         "card card card"
