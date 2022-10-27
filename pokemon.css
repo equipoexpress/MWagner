@@ -42,7 +42,7 @@
     color: #6e6e6e;
     font-weight: 500;
   }
-  .contenedorgrid {
+  .container {
     grid-template-areas: "card card card"
         "card card card"
         "card card card"
