@@ -310,7 +310,31 @@ p {
   /*3 PUNTOS DE CONTROL*/ 
 
 
-  @media screen and (max-width: 768px) and (max-width: 1280px) {
+  @media screen and (max-width: 1280px){
+    .contenedor.contenido{
+        grid-column: 1 / -1;
+        width:100%;
+    }   
+    .contenedor .sidebar{
+        grid-column: 1 / -1;
+        width:30%;
+    } 
+    .contenedor .widget-1 {
+        grid-column: span 2;
+        width:100%;
+    }
+    .contenedor .widget-2 {
+        grid-column: span 2;
+        width:100%;
+    }
+    .contenedorgrid {
+        grid-template-areas: "contenido contenido sidebar"
+            "contenido contenido sidebar"
+            "widget-1 widget-1 sidebar"
+    }
+
+}
+  @media screen and (max-width: 768px) {
     .contenedor.contenido{
         grid-column: 1 / -1;
         width:100%;
@@ -327,6 +351,12 @@ p {
         grid-column: span 2;
         width:100%;
     }
+    .contenedorgrid {
+        grid-template-areas: "contenido contenido contenido"
+            "sidebar sidebar sidebar"
+            "widget-1 widget-1 widget-2"
+    }
+
 }
 @media screen and (max-width: 480px) {
     .contenedor.contenido{
@@ -336,6 +366,11 @@ p {
         display: none;
     } 
 
+    .contenedorgrid {
+        grid-template-areas: "contenido contenido contenido"
+            "sidebar sidebar sidebar"
+            "widget-1 widget-1 widget-2"
+    }
 
 
 }
