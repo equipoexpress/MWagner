@@ -290,7 +290,7 @@ p {
 }
 
 /*PUNTO DE CONTROL*/
-@media all and (max-width:768px) {
+/*@media all and (max-width:768px) {
     .nav-menu {
         flex-direction: column;
         align-items: center;
@@ -305,6 +305,39 @@ p {
         left: 100%;
         transition: left 0.3s;
     }
+  */
+  /*3 PUNTOS DE CONTROL*/ 
+
+
+  @media screen and (max-width: 768px) and (max-width: 1280px) {
+    .contenedor.contenido{
+        grid-column: 1 / -1;
+        width:100%;
+    }   
+    .contenedor .sidebar{
+        grid-column: 1 / -1;
+        width:100%;
+    } 
+    .contenedor .widget-1 {
+        grid-column: span 2;
+        width:100%;
+    }
+    .contenedor .widget-2 {
+        grid-column: span 2;
+        width:100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .contenedor.contenido{
+        width:100%;
+    }   
+    .contenedor .sidebar{
+        display: none;
+    } 
+
+
+
+}
 
     .nav-toggle {
         display: block;
