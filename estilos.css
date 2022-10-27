@@ -156,7 +156,7 @@ p {
 /*MAIN CON GRID*/
 .contenedorgrid-full {
     display: grid;
-    grid-template-columns: 33% 1fr 33% /*repeat(3 1fr);*/
+    grid-template-columns: 33% 1fr 33%;
     grid-gap: 20px;
     grid-template-areas: "titulo titulo titulo"
         "bloque1 bloque2 bloque3"
@@ -346,7 +346,7 @@ p {
     }
 
     .contenedorgrid-full {
-        grid-template: repeat(12, 1fr);
+        grid-template: repeat(12, auto) / 100%;
         grid-template-areas:"titulo" "bloque1" "bloque2" "bloque3" "titulo2" "descripcion"
                               "imagen" "titulo3" "servicio1" "servicio2" "servicio3";
     }
