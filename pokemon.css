@@ -87,15 +87,6 @@
 }
 
 
-.bienvenida {
-    display: inline-flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: center;
-    height: 70vh;
-    width: 50vw;
-}
   body{
     background-color: #ececec;
     font-family: 'Ubuntu', sans-serif;
