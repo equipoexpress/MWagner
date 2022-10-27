@@ -9,13 +9,6 @@
     flex-flow: column nowrap;
 }
 
-.banner {
-    background: url(img/bg-header.jpg);
-    background-position: top;
-    background-size: cover;
-    background-attachment: contain;
-}
-
 .menu {
     display: flex;
     justify-content: space-between;
