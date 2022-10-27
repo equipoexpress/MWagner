@@ -42,3 +42,21 @@
     color: #6e6e6e;
     font-weight: 500;
   }
+  .contenedorgrid {
+    grid-template-areas: "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+        "card card card"
+
+}
