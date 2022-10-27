@@ -3,7 +3,99 @@
     padding: 0;
     box-sizing: border-box;
   }
+/*HEADER CON FLEX*/
+.header {
+    display: flex;
+    flex-flow: column nowrap;
+}
 
+.menu {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.logo {
+    display: inline-flex;
+}
+
+/*ANIMACIÓN PUNTO DEL LOGO EN HEADER*/
+.punto {
+    width: 1.2vw;
+    height: 1.2vw;
+    border-radius: 50%;
+    background-color: #FFBE00;
+    align-self: center;
+    animation-name: animacion;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animacion {
+    0% {
+        background-color: #FFBE00;
+        transform: translateX(0);
+    }
+
+    25% {
+        background-color: #D4471C;
+    }
+
+    50% {
+        background-color: #1CA6C3;
+    }
+
+    75% {
+        background-color: #72AB80;
+    }
+
+    100% {
+        background: #89B458;
+        transform: translateX(100%);
+        border-radius: 0%;
+    }
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav a {
+    color: #1d1d1b;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    padding: 0 10px;
+}
+
+.nav a:hover {
+    color: #52006A;
+    background-color: rgba(127, 17, 224, .3);
+    transition: 0, 5s;
+}
+
+.nav ul {
+    list-style-type: none;
+}
+
+
+.bienvenida {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    height: 70vh;
+    width: 50vw;
+}
   body{
     background-color: #ececec;
     font-family: 'Ubuntu', sans-serif;
