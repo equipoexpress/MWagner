@@ -261,6 +261,10 @@ p {
     grid-area: widget-2;
 }
 
+.legend{
+    font-size: 0.9em;
+    color: #443988;
+}
 /*FOOTER CON FLEXBOX*/
 .footer {
     display: flex;
