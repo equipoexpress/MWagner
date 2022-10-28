@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-html,
 body {
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
+    line-height: 1.5;
 }
 
 a {
@@ -15,36 +15,52 @@ a {
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 3em;
     color: #FFBE00;
     text-align: left;
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
     color: #FF3F20;
 }
 
 h3 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     color: #9F0052;
 }
 
+h4 {
+    font-size: 1.5em;
+    color: #52006A;
+}
+
+h1,
+h2,
+h3,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
 p {
     font-size: 0.9em;
+    margin: 10px 0;
     color: #443988;
 }
 
 .contenedor {
     display: flex;
     flex-flow: column nowrap;
+    margin: 0 auto;
 }
 
 .margen {
     padding: 20px 50px;
+
+}
+
+ul {
+    list-style-type: none;
 }
 
 .boton {
@@ -138,11 +154,6 @@ p {
     transition: 0, 5s;
 }
 
-.nav ul {
-    list-style-type: none;
-}
-
-
 .bienvenida {
     display: inline-flex;
     flex-flow: column nowrap;
@@ -166,17 +177,49 @@ p {
         "servicio1 servicio2 servicio3";
 }
 
-.titulo {grid-area: titulo;}
-.bloque1 {grid-area: bloque1;}
-.bloque2 {grid-area: bloque2;}
-.bloque3 {grid-area: bloque3;}
-.titulo2 {grid-area: titulo2;}
-.descripcion {grid-area: descripcion;}
-.imagen {grid-area: imagen}
-.titulo3 {grid-area: titulo3;}
-.sevicio1 {grid-area: servicio1;}
-.sevicio2 {grid-area: servicio2;}
-.sevicio3 {grid-area: servicio3;}
+.titulo {
+    grid-area: titulo;
+}
+
+.bloque1 {
+    grid-area: bloque1;
+}
+
+.bloque2 {
+    grid-area: bloque2;
+}
+
+.bloque3 {
+    grid-area: bloque3;
+}
+
+.titulo2 {
+    grid-area: titulo2;
+}
+
+.descripcion {
+    grid-area: descripcion;
+}
+
+.imagen {
+    grid-area: imagen
+}
+
+.titulo3 {
+    grid-area: titulo3;
+}
+
+.sevicio1 {
+    grid-area: servicio1;
+}
+
+.sevicio2 {
+    grid-area: servicio2;
+}
+
+.sevicio3 {
+    grid-area: servicio3;
+}
 
 .item-titulo {
     text-align: center;
@@ -203,20 +246,94 @@ p {
     text-align: left;
 }
 
-.item-servicio{
+.item-servicio {
     padding-bottom: 10%;
     text-align: center;
     line-height: 50px;
 }
 
-.item-servicio h3{
+.item-servicio h3 {
     font-size: large;
     text-transform: uppercase;
 }
 
-.item-servicio ul{
+.item-servicio ul {
     line-height: normal;
-    list-style-type: none;
+}
+
+.contenedorgrid-port {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(250px, auto);
+}
+
+.item {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.item a {
+    width: 120px;
+    color: #ffffff;
+
+}
+
+.item3 a {
+    width: 150px;
+}
+
+.item6 a {
+    width: 150px;
+}
+
+.item1 {
+    grid-column: 1;
+    grid-row: 1/2;
+    background: url(img/Portfolio1.jpg)
+}
+
+.item2 {
+    grid-column: 2;
+    grid-row: 1/2;
+    background: url(img/Portfolio2.jpg);
+}
+
+.item3 {
+    grid-column: 3/5;
+    grid-row: 1/3;
+    background: url(img/Portfolio3.jpg);
+}
+
+.item4 {
+    grid-column: 1;
+    grid-row: 2;
+    background: url(img/Portfolio4.jpg)
+}
+
+.item5 {
+    grid-column: 2;
+    grid-row: 2;
+    background: url(img/Portfolio5.jpg);
+}
+
+.item6 {
+    grid-column: 1/5;
+    grid-row: 3;
+    background: url(img/Portfolio6.jpg);
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .contenedorgrid {
@@ -294,119 +411,171 @@ p {
     list-style-type: none;
 }
 
-/*PUNTO DE CONTROL*/
-/*@media all and (max-width:768px) {
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(127, 17, 224, .8);
-        top: 15vh;
-        left: 0;
-        position: fixed;
+
+/*3 PUNTOS DE CONTROL }*/
+
+@media screen and (max-width: 1280px) {
+    .contenedor.contenido {
+        grid-column: 1 / -1;
         width: 100%;
-        padding: 3vh 0;
-        height: 100%;
-        overflow-y: auto;
-        left: 100%;
-        transition: left 0.3s;
     }
-  */
-  /*3 PUNTOS DE CONTROL*/ 
 
+    .contenedor .sidebar {
+        grid-column: 1 / -1;
+        width: 30%;
+    }
 
-  @media screen and (max-width: 1280px){
-    .contenedor.contenido{
-        grid-column: 1 / -1;
-        width:100%;
-    }   
-    .contenedor .sidebar{
-        grid-column: 1 / -1;
-        width:30%;
-    } 
     .contenedor .widget-1 {
         grid-column: span 2;
-        width:100%;
+        width: 100%;
     }
+
     .contenedor .widget-2 {
         grid-column: span 2;
-        width:100%;
+        width: 100%;
     }
+
     .contenedorgrid {
         grid-template-areas: "contenido contenido sidebar"
             "contenido contenido sidebar"
             "widget-1 widget-1 sidebar"
     }
 
-}
-  @media screen and (max-width: 768px) {
-    .contenedor.contenido{
-        grid-column: 1 / -1;
-        width:100%;
-    }   
-    .contenedor .sidebar{
-        grid-column: 1 / -1;
-        width:100%;
-    } 
-    .contenedor .widget-1 {
-        grid-column: span 2;
-        width:100%;
+
+    @media screen and (max-width: 768px) {
+        .contenedor.contenido {
+            grid-column: 1 / -1;
+            width: 100%;
+        }
+
+        .contenedor .sidebar {
+            grid-column: 1 / -1;
+            width: 100%;
+        }
+
+        .contenedor .widget-1 {
+            grid-column: span 2;
+            width: 100%;
+        }
+
+        .contenedor .widget-2 {
+            grid-column: span 2;
+            width: 100%;
+        }
+
+        .contenedorgrid {
+            grid-template-areas: "contenido contenido contenido"
+                "sidebar sidebar sidebar"
+                "widget-1 widget-1 widget-2"
+        }
+
+        .nav-menu {
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(127, 17, 224, .8);
+            top: 15vh;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            padding: 3vh 0;
+            height: 100%;
+            overflow-y: auto;
+            left: 100%;
+            transition: left 0.3s;
+        }
+
+        .nav-toggle {
+            display: block;
+            font-size: 1.5em;
+        }
+
+        .nav-menu-visible {
+            left: 0;
+        }
+
+        .nav a {
+            font-size: 2em;
+        }
+
+        .nav a:hover {
+            background-color: none;
+            color: #FF3F20;
+        }
+
+        .bienvenida {
+            width: 80vw;
+        }
+
+        .contenedorgrid-full {
+            grid-template: repeat(12, auto) / 100%;
+            grid-template-areas: "titulo" "bloque1" "bloque2" "bloque3" "titulo2" "descripcion"
+                "imagen" "titulo3" "servicio1" "servicio2" "servicio3";
+        }
+
+        .item-descripcion {
+            padding: 5%;
+        }
+
+        .contenedorgrid {
+            grid-template-areas: "contenido contenido contenido"
+                "sidebar sidebar sidebar"
+                "widget-1 widget-1 widget-2"
+        }
+
     }
-    .contenedor .widget-2 {
-        grid-column: span 2;
-        width:100%;
-    }
-    .contenedorgrid {
-        grid-template-areas: "contenido contenido contenido"
-            "sidebar sidebar sidebar"
-            "widget-1 widget-1 widget-2"
-    }
-
-}
-@media screen and (max-width: 480px) {
-    .contenedor.contenido{
-        width:100%;
-    }   
-    .contenedor .sidebar{
-        display: none;
-    } 
-
-    .contenedorgrid {
-        grid-template-areas: "contenido contenido contenido"
-            "sidebar sidebar sidebar"
-            "widget-1 widget-1 widget-2"
-    }
 
 
-}
 
-    .nav-toggle {
-        display: block;
-        font-size: 1.5em;
-    }
+    @media screen and (max-width: 480px) {
+        .contenedor.contenido {
+            width: 100%;
+        }
 
-    .nav-menu-visible {
-        left: 0;
-    }
+        .contenedor .sidebar {
+            display: none;
+        }
 
-    .nav a {
-        font-size: 2em;
-    }
+        .contenedorgrid {
+            grid-template-areas: "contenido contenido contenido"
+                "sidebar sidebar sidebar"
+                "widget-1 widget-1 widget-2"
+        }
 
-    .nav a:hover {
-        background-color: none;
-        color: #FF3F20;
-    }
+        .nav-toggle {
+            display: block;
+            font-size: 1.5em;
+        }
 
-    .bienvenida {
-        width: 80vw;
-    }
+        .nav-menu-visible {
+            left: 0;
+        }
 
-    .contenedorgrid-full {
-        grid-template: repeat(12, auto) / 100%;
-        grid-template-areas: "titulo" "bloque1" "bloque2" "bloque3" "titulo2" "descripcion"
-            "imagen" "titulo3" "servicio1" "servicio2" "servicio3";
-    }
+        .nav a {
+            font-size: 2em;
+        }
 
-    .item-descripcion {
-        padding: 5%;
+        .nav a:hover {
+            background-color: none;
+            color: #FF3F20;
+        }
+
+        .bienvenida {
+            width: 60vw;
+        }
+
+        .contenedorgrid-full {
+            grid-template: repeat(12, auto) / 100%;
+            grid-template-areas: "titulo" "bloque1" "bloque2" "bloque3" "titulo2" "descripcion"
+                "imagen" "titulo3" "servicio1" "servicio2" "servicio3";
+        }
+
+        .item-descripcion {
+            padding: 5%;
+        }
+
+        .contenedorgrid {
+            grid-template-areas: "contenido contenido contenido"
+                "sidebar sidebar sidebar"
+                "widget-1 widget-1 widget-2"
+        }
     }
