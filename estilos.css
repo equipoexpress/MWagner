@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-html,
 body {
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
@@ -63,8 +62,6 @@ p {
 ul {
     list-style-type: none;
 }
-
-
 
 .boton {
     border-bottom: 1px solid #FF3F20;
@@ -410,97 +407,171 @@ ul {
     list-style-type: none;
 }
 
-/*PUNTO DE CONTROL*/
-@media all and (max-width:768px) {
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(127, 17, 224, .8);
-        top: 15vh;
-        left: 0;
-        position: fixed;
+
+/*3 PUNTOS DE CONTROL }*/
+
+@media screen and (max-width: 1280px) {
+    .contenedor.contenido {
+        grid-column: 1 / -1;
         width: 100%;
-        padding: 3vh 0;
-        height: 100%;
-        overflow-y: auto;
-        left: 100%;
-        transition: left 0.3s;
     }
 
-    .nav-toggle {
-        display: block;
-        font-size: 1.5em;
+    .contenedor .sidebar {
+        grid-column: 1 / -1;
+        width: 30%;
     }
 
-    .nav-menu-visible {
-        left: 0;
+    .contenedor .widget-1 {
+        grid-column: span 2;
+        width: 100%;
     }
 
-    .nav a {
-        font-size: 2em;
-    }
-
-    .nav a:hover {
-        background-color: none;
-        color: #FF3F20;
-    }
-
-    .bienvenida {
-        width: 80vw;
-    }
-
-    .contenedorgrid-full {
-        grid-template: repeat(12, auto) / 100%;
-        grid-template-areas: "titulo" "bloque1" "bloque2" "bloque3" "titulo2" "descripcion"
-            "imagen" "titulo3" "servicio1" "servicio2" "servicio3";
-    }
-
-    .item-descripcion {
-        padding: 5%;
-    }
-
-    .contenedorgrid-port {
-        grid-template-columns: 1fr;
-    }
-
-    .item1,
-    .item2,
-    .item3,
-    .item4,
-    .item5,
-    .item6 {
-        grid-column: 1;
-    }
-
-    .item1 {
-        grid-row: 1;
-    }
-
-    .item2 {
-        grid-row: 2;
-    }
-
-    .item3 {
-        grid-row: 3;
-    }
-
-    .item4 {
-        grid-row: 4;
-    }
-
-    .item5 {
-        grid-row: 5;
-    }
-
-    .item6 {
-        grid-row: 6;
-
+    .contenedor .widget-2 {
+        grid-column: span 2;
+        width: 100%;
     }
 
     .contenedorgrid {
-        grid-template-areas: "contenido contenido contenido"
-            "sidebar sidebar sidebar"
-            "widget-1 widget-1 widget-2"
+        grid-template-areas: "contenido contenido sidebar"
+            "contenido contenido sidebar"
+            "widget-1 widget-1 sidebar"
     }
 
-}
+
+    @media screen and (max-width: 768px) {
+        .contenedor.contenido {
+            grid-column: 1 / -1;
+            width: 100%;
+        }
+
+        .contenedor .sidebar {
+            grid-column: 1 / -1;
+            width: 100%;
+        }
+
+        .contenedor .widget-1 {
+            grid-column: span 2;
+            width: 100%;
+        }
+
+        .contenedor .widget-2 {
+            grid-column: span 2;
+            width: 100%;
+        }
+
+        .contenedorgrid {
+            grid-template-areas: "contenido contenido contenido"
+                "sidebar sidebar sidebar"
+                "widget-1 widget-1 widget-2"
+        }
+
+        .nav-menu {
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(127, 17, 224, .8);
+            top: 15vh;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            padding: 3vh 0;
+            height: 100%;
+            overflow-y: auto;
+            left: 100%;
+            transition: left 0.3s;
+        }
+
+        .nav-toggle {
+            display: block;
+            font-size: 1.5em;
+        }
+
+        .nav-menu-visible {
+            left: 0;
+        }
+
+        .nav a {
+            font-size: 2em;
+        }
+
+        .nav a:hover {
+            background-color: none;
+            color: #FF3F20;
+        }
+
+        .bienvenida {
+            width: 80vw;
+        }
+
+        .contenedorgrid-full {
+            grid-template: repeat(12, auto) / 100%;
+            grid-template-areas: "titulo" "bloque1" "bloque2" "bloque3" "titulo2" "descripcion"
+                "imagen" "titulo3" "servicio1" "servicio2" "servicio3";
+        }
+
+        .item-descripcion {
+            padding: 5%;
+        }
+
+        .contenedorgrid {
+            grid-template-areas: "contenido contenido contenido"
+                "sidebar sidebar sidebar"
+                "widget-1 widget-1 widget-2"
+        }
+
+    }
+
+
+
+    @media screen and (max-width: 480px) {
+        .contenedor.contenido {
+            width: 100%;
+        }
+
+        .contenedor .sidebar {
+            display: none;
+        }
+
+        .contenedorgrid {
+            grid-template-areas: "contenido contenido contenido"
+                "sidebar sidebar sidebar"
+                "widget-1 widget-1 widget-2"
+        }
+
+        .nav-toggle {
+            display: block;
+            font-size: 1.5em;
+        }
+
+        .nav-menu-visible {
+            left: 0;
+        }
+
+        .nav a {
+            font-size: 2em;
+        }
+
+        .nav a:hover {
+            background-color: none;
+            color: #FF3F20;
+        }
+
+        .bienvenida {
+            width: 60vw;
+        }
+
+        .contenedorgrid-full {
+            grid-template: repeat(12, auto) / 100%;
+            grid-template-areas: "titulo" "bloque1" "bloque2" "bloque3" "titulo2" "descripcion"
+                "imagen" "titulo3" "servicio1" "servicio2" "servicio3";
+        }
+
+        .item-descripcion {
+            padding: 5%;
+        }
+
+        .contenedorgrid {
+            grid-template-areas: "contenido contenido contenido"
+                "sidebar sidebar sidebar"
+                "widget-1 widget-1 widget-2"
+        }
+    }
