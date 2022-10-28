@@ -1,8 +1,70 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-  }
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #ececec;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3em;
+    color: #FFBE00;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #FF3F20;
+}
+
+h3 {
+    font-size: 2em;
+    color: #9F0052;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #52006A;
+}
+
+h1,
+h2,
+h3,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 0.9em;
+    margin: 10px 0;
+    color: #443988;
+}
+
+.contenedor {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+}
+
+.margen {
+    padding: 20px 50px;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+
 /*HEADER CON FLEX*/
 .header {
     display: flex;
@@ -82,37 +144,30 @@
     transition: 0, 5s;
 }
 
-.nav ul {
-    list-style-type: none;
-}
 
-
-  body{
-    background-color: #ececec;
-    font-family: 'Ubuntu', sans-serif;
-  }
-
- .hola{
+.hola{
   margin-top: 100px;
 }
-  .card{
+
+.card{
     width: 60%;
     margin-top: 100px;
     margin-left: 20%;
     background-color: white;
     padding: 5%;
     border-radius: 20px;
-  }
+}
 
-  .card img {
+.card img {
     width: 100%;
-  }
+}
 
-  .card span{
-    color: #6e6e6e;
+.card span{
+   color: #6e6e6e;
     font-weight: 500;
-  }
-  .container {
+}
+
+.container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -121,7 +176,8 @@
     width: 90%;
     max-width: 1000px;
 }
-  .container {
+
+.container {
     grid-template-areas: "card card card"
         "card card card"
         "card card card"
@@ -137,5 +193,40 @@
         "card card card"
         "card card card"
         "card card card"
+}
 
+/*PUNTO DE CONTROL*/
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(127, 17, 224, .8);
+        top: 15vh;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        padding: 3vh 0;
+        height: 100%;
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-toggle {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .nav-menu-visible {
+        left: 0;
+    }
+
+    .nav a {
+        font-size: 2em;
+    }
+
+    .nav a:hover {
+        background-color: none;
+        color: #FF3F20;
+    }
 }
